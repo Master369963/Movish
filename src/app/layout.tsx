@@ -1,10 +1,13 @@
 import "./globals.css"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Roboto_Flex } from "next/font/google"
 import Header from "../components/header/Header"
 import Providers from "./Providers"
+import Navbar from "@/components/navbar/Navbar"
 
-const inter = Inter({ subsets: ["latin"] })
+const robotoFlex = Roboto_Flex({ subsets: ["latin"] })
+
+
 
 export const metadata: Metadata = {
   title: "IMDB Clone",
@@ -21,9 +24,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </head>
-      <body className={inter.className}>
+      <body className={robotoFlex.className}>
         <Providers>
           <Header />
+          <Navbar />
           {children}
         </Providers>
       </body>
