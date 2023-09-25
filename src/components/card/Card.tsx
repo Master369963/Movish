@@ -19,7 +19,7 @@ const Card = ({ result }) => {
 
   return (
     <div
-      className={`${lexend.className} group max-w-[300px] cursor-pointer rounded-lg border shadow-md transition-shadow duration-200 hover:shadow-gray-400 dark:border-none dark:shadow-c15 dark:hover:shadow-c3 dark:hover:shadow-secondary-100/30 sm:m-0`}
+      className={`${lexend.className} group mb-5 w-full cursor-pointer rounded-lg border shadow-md transition-shadow duration-200 hover:shadow-gray-400 dark:border-none dark:shadow-c15 dark:hover:shadow-c3 dark:hover:shadow-secondary-100/30 sm:m-0 sm:mb-0 sm:max-w-[300px]`}
     >
       <Link href={`/movie/${result.id}`} className="flex h-full flex-col">
         <div className="relative h-36 min-h-[175px] overflow-hidden rounded-t-lg">

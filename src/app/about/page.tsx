@@ -3,8 +3,8 @@ import { LuPopcorn } from "react-icons/lu";
 const About = () => {
   return (
     <section className="min-h-[calc(100vh-156px)] bg-about bg-cover bg-no-repeat">
-      <div className="flex h-full w-full items-center justify-center p-6  sm:justify-end">
-        <div className="flex-col gap-3 rounded-xl bg-white/60 p-6 backdrop-blur-lg sm:w-3/4 lg:w-1/2">
+      <div className="flex h-full w-full items-center justify-center p-4 sm:justify-end sm:p-6">
+        <div className="flex-col gap-3 rounded-xl bg-white/60 p-2 backdrop-blur-lg sm:w-3/4 sm:p-6 lg:w-1/2">
           <h1 className="text-2xl font-bold text-black">About</h1>
           <p className="mt-2 text-black">
             Welcome to our movie database website! We are a team of passionate
@@ -34,13 +34,15 @@ const About = () => {
           </h2>
           <ul className="ml-1 text-gray-700">
             <li className="flex items-center gap-1">
-              <LuPopcorn /> Trending: trending movies on TMDB
+              <LuPopcorn className="min-w-[24px]" /> Trending: trending movies
+              on TMDB
             </li>
             <li className="flex items-center gap-1">
-              <LuPopcorn /> Top rated: a list of movies ordered by rating
+              <LuPopcorn className="min-w-[24px]" /> Top rated: a list of movies
+              ordered by rating
             </li>
             <li className="flex items-center gap-1">
-              <LuPopcorn /> Details of movies
+              <LuPopcorn className="min-w-[24px]" /> Details of movies
             </li>
           </ul>
         </div>

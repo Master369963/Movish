@@ -35,7 +35,7 @@ export default function SearchBar() {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         type="text"
-        placeholder="Search keywords..."
+        placeholder="Find movies..."
         className="rounded-lg bg-transparent px-3 py-2 text-sm placeholder-slate-500 outline-none"
       />
       <button
