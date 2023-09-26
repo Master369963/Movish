@@ -1,23 +1,21 @@
-import "./globals.css"
-import type { Metadata } from "next"
-import { Roboto_Flex } from "next/font/google"
-import Header from "../components/header/Header"
-import Providers from "./Providers"
-import Navbar from "@/components/navbar/Navbar"
+import "./globals.css";
+import type { Metadata } from "next";
+import { Roboto_Flex } from "next/font/google";
+import Header from "../components/header/Header";
+import Providers from "./Providers";
+import Navbar from "@/components/navbar/Navbar";
 
-const robotoFlex = Roboto_Flex({ subsets: ["latin"] })
-
-
+const robotoFlex = Roboto_Flex({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "IMDB Clone",
+  title: "Movish",
   description: "This is the IMDb clone website.",
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -32,5 +30,5 @@ export default function RootLayout({
         </Providers>
       </body>
     </html>
-  )
+  );
 }

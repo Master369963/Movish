@@ -9,7 +9,7 @@ const lexend = Lexend({ subsets: ["latin"] });
 const Card = ({ result }) => {
   let imageUrl;
 
-  if (result.backdrop_path) {
+  if (result) {
     imageUrl = `https://image.tmdb.org/t/p/original/${
       result.backdrop_path || result.poster_path
     }`;
@@ -30,7 +30,7 @@ const Card = ({ result }) => {
           <Image
             src={imageUrl}
             alt="poster image"
-            className="object-cover transition-transform duration-200 group-hover:scale-110 "
+            className={`object-cover transition-transform duration-200 group-hover:scale-110`}
             placeholder="blur"
             blurDataURL="/spinner.svg"
             fill

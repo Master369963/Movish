@@ -1,12 +1,13 @@
-import Card from "./Card"
+import Card from "./Card";
 
-const Cards = ({result}) => {
+const Cards = ({ result }) => {
   return (
-  <>
-    {result.map((movie) =>  (
-      <Card key={movie.id} result={movie} />
-    ))}
-  </>
-)}
+    <>
+      {result.map((movie) => (
+        <Card key={movie.id} result={movie} />
+      ))}
+    </>
+  );
+};
 
-export default Cards
+export default Cards;
