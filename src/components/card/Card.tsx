@@ -10,7 +10,7 @@ const lexend = Lexend({ subsets: ["latin"] });
 const Card = ({ movie }: { movie: Movie }) => {
   let imageUrl;
 
-  if (movie) {
+  if (movie.backdrop_path || movie.poster_path) {
     imageUrl = `https://image.tmdb.org/t/p/original/${
       movie.backdrop_path || movie.poster_path
     }`;
@@ -30,7 +30,7 @@ const Card = ({ movie }: { movie: Movie }) => {
 
           <Image
             src={imageUrl}
-            alt="poster image"
+            alt={movie.title}
             className={`object-cover transition-transform duration-200 group-hover:scale-110`}
             placeholder="blur"
             blurDataURL="/spinner.svg"
