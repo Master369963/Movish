@@ -7,7 +7,7 @@ const SearchPage = async ({ params }: { params: { keyword: string } }) => {
     `${baseUrl}/search/movie?api_key=${process.env.API_KEY}&query=${params.keyword}&include_adult=false&language=en-US&page=1&year=2000`,
   );
   const data = await res.json();
-  const result = data.results;
+  const movies = data.results;
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -20,13 +20,13 @@ const SearchPage = async ({ params }: { params: { keyword: string } }) => {
           Search keyword: {params.keyword.toLowerCase()}
         </h2>
         <div className="sm:grid_auto sm:grid sm:auto-rows-fr sm:gap-4">
-          {result && result.length === 0 && (
+          {movies && movies.length === 0 && (
             <h1 className="w-full pt-6 text-center text-2xl">
               No result found.
             </h1>
           )}
 
-          {result && <Cards result={result} />}
+          {movies && <Cards movies={movies} />}
         </div>
       </div>
     </div>

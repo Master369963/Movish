@@ -1,10 +1,11 @@
 import Card from "./Card";
+import type { Movie } from "../utilities/type";
 
-const Cards = ({ result }) => {
+const Cards = ({ movies }: { movies: Movie[] }) => {
   return (
     <>
-      {result.map((movie) => (
-        <Card key={movie.id} result={movie} />
+      {movies.map((movie) => (
+        <Card key={movie.id} movie={movie} />
       ))}
     </>
   );

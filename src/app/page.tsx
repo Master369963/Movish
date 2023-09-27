@@ -28,7 +28,7 @@ export default async function Home({
   return (
     <div className="px-4 py-8">
       <div className="grid_auto mx-auto grid max-w-5xl auto-rows-fr gap-4">
-        <Cards result={result} />
+        <Cards movies={result} />
       </div>
       <Pagination genre={genre} page={page} totalPage={dataTotslPages} />
     </div>

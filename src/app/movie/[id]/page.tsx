@@ -1,22 +1,23 @@
 import RatingStart from "@/components/RatingStar";
 import Image from "next/image";
+import type { Movie } from "../../../components/utilities/type";
 
 const baseUrl = "https://api.themoviedb.org/3/";
 
-type Genre = {
-  name: string;
-};
+// type Genre = {
+//   name: string;
+// };
 
-type Movie = {
-  title: string;
-  genres: Genre[];
-  backdrop_path: string;
-  poster_path: string;
-  overview: string;
-  release_date: string;
-  vote_count: number;
-  vote_average: number;
-};
+// type Movie = {
+//   title: string;
+//   genres: Genre[];
+//   backdrop_path: string;
+//   poster_path: string;
+//   overview: string;
+//   release_date: string;
+//   vote_count: number;
+//   vote_average: number;
+// };
 
 const getMovie = async (movieId: number): Promise<Movie> => {
   const res = await fetch(
