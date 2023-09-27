@@ -7,10 +7,6 @@ export default function SearchBar() {
   const [search, setSearch] = useState("");
   const ref = useRef<HTMLInputElement>(null);
   const router = useRouter();
-  // const vilaidInput = (e) => {
-  //   const input = e.target.value.trim();
-  //   setSearch(input);
-  // };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     if (ref.current) {

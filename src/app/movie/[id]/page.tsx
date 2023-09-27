@@ -3,15 +3,30 @@ import Image from "next/image";
 
 const baseUrl = "https://api.themoviedb.org/3/";
 
-const getMovie = async (movieId) => {
+type Genre = {
+  name: string;
+};
+
+type Movie = {
+  title: string;
+  genres: Genre[];
+  backdrop_path: string;
+  poster_path: string;
+  overview: string;
+  release_date: string;
+  vote_count: number;
+  vote_average: number;
+};
+
+const getMovie = async (movieId: number): Promise<Movie> => {
   const res = await fetch(
     `${baseUrl}movie/${movieId}?api_key=${process.env.API_KEY}`,
   );
   return await res.json();
 };
 
-const MovieDetails = async ({ params }) => {
-  const movie = await getMovie(params.id);
+const MovieDetails = async ({ params }: { params: { id: string } }) => {
+  const movie = await getMovie(Number(params.id));
   let imageUrl;
   if (movie.backdrop_path) {
     imageUrl = `https://image.tmdb.org/t/p/original/${

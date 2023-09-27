@@ -9,7 +9,6 @@ const Pagination = ({
   page,
 }: {
   totalPage: number;
-
   genre: string;
   page: number;
 }) => {

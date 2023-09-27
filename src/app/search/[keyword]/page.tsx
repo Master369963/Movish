@@ -2,7 +2,7 @@ import Cards from "@/components/card/Cards";
 
 const baseUrl = "https://api.themoviedb.org/3/";
 
-const SearchPage = async ({ params }) => {
+const SearchPage = async ({ params }: { params: { keyword: string } }) => {
   const res = await fetch(
     `${baseUrl}/search/movie?api_key=${process.env.API_KEY}&query=${params.keyword}&include_adult=false&language=en-US&page=1&year=2000`,
   );

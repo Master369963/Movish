@@ -12,11 +12,7 @@ export const metadata: Metadata = {
   description: "This is the IMDb clone website.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
     <html lang="en">
       <head>

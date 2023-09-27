@@ -3,7 +3,11 @@ import Pagination from "@/components/pagination/Pagination";
 
 const baseUrl = "https://api.themoviedb.org/3/";
 
-export default async function Home({ searchParams }) {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: { genre?: string; page?: string };
+}) {
   const genre = searchParams.genre || "fetchTrending";
   const page = searchParams.page ? Number(searchParams.page) : 1;
 

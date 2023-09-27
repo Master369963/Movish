@@ -1,8 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
-
-const Error = ({ error, reset }) => {
+const Error = ({ reset }: { reset: () => void }) => {
   return (
     <div className="mt-10 text-center">
       <h1>Something went wrong!</h1>
