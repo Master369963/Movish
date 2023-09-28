@@ -16,7 +16,7 @@ export default function SearchBar() {
         setSearch("");
         return;
       }
-      router.push(`/search/${input}`);
+      router.push(`/search?q=${input}`);
       setSearch("");
     }
   };

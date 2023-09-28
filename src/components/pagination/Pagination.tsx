@@ -2,34 +2,41 @@
 import { FiMoreHorizontal } from "react-icons/fi";
 import { BiChevronsLeft, BiChevronsRight } from "react-icons/bi";
 import Link from "next/link";
+import { usePathname, useSearchParams } from "next/navigation";
 
 const Pagination = ({
   totalPage,
   genre,
-  page,
+  page = 1,
 }: {
   totalPage: number;
-  genre: string;
-  page: number;
+  genre?: string;
+  page?: number;
 }) => {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
   const displayPages = 7;
-  let currentMinPage;
-  let currentMaxPage = Math.ceil(page / displayPages) * displayPages;
-  if (page % displayPages === 0) {
-    currentMinPage = (page / displayPages - 1) * displayPages + 1;
-  } else {
-    currentMinPage = Math.floor(page / displayPages) * displayPages + 1;
-  }
+  let currentMinPage = Math.floor((page - 1) / displayPages) * displayPages + 1;
+  let currentMaxPage =
+    totalPage > displayPages
+      ? Math.ceil(page / displayPages) * displayPages
+      : totalPage;
   const pageList = [];
 
   for (let i = currentMinPage; i < currentMaxPage + 1; i++) {
+    const queryString = new URLSearchParams({
+      ...Object.fromEntries(searchParams.entries()),
+      page: i.toString(),
+    });
+    const href = `${pathname}?${queryString}`;
+
     pageList.push(
       <li
         className={`${
           page === i ? "bg-secondary-100" : "hover:bg-secondary-100/70"
         } flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg font-bold text-primary `}
       >
-        <Link href={`/?genre=${genre}&page=${i}`}>{i}</Link>
+        <Link href={href}>{i}</Link>
       </li>,
     );
   }
@@ -52,9 +59,11 @@ const Pagination = ({
           </Link>
         </li>
         {pageList}
-        <li className="flex h-8 w-8 items-center justify-center font-bold text-primary">
-          <FiMoreHorizontal />
-        </li>
+        {totalPage > displayPages && (
+          <li className="flex h-8 w-8 items-center justify-center font-bold text-primary">
+            <FiMoreHorizontal />
+          </li>
+        )}
         <li
           className={`${
             page === totalPage

@@ -18,7 +18,7 @@ export default async function Home({
     { next: { revalidate: 10000 } },
   );
   const data = await res.json();
-  const result = data.results;
+  const movies = data.results;
   const dataTotslPages = data.total_pages;
 
   if (!res.ok) {
@@ -28,7 +28,7 @@ export default async function Home({
   return (
     <div className="px-4 py-8">
       <div className="grid_auto mx-auto grid max-w-5xl auto-rows-fr gap-4">
-        <Cards movies={result} />
+        <Cards movies={movies} />
       </div>
       <Pagination genre={genre} page={page} totalPage={dataTotslPages} />
     </div>
