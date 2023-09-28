@@ -23,20 +23,27 @@ const Pagination = ({
       : totalPage;
   const pageList = [];
 
-  for (let i = currentMinPage; i < currentMaxPage + 1; i++) {
+  const getHref = (page: number) => {
     const queryString = new URLSearchParams({
       ...Object.fromEntries(searchParams.entries()),
-      page: i.toString(),
+      page: page.toString(),
     });
-    const href = `${pathname}?${queryString}`;
+    return `${pathname}?${queryString}`;
+  };
 
+  for (let i = currentMinPage; i < currentMaxPage + 1; i++) {
     pageList.push(
       <li
         className={`${
           page === i ? "bg-secondary-100" : "hover:bg-secondary-100/70"
-        } flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg font-bold text-primary `}
+        } flex cursor-pointer items-center justify-center rounded-lg font-bold text-primary `}
       >
-        <Link href={href}>{i}</Link>
+        <Link
+          href={getHref(i)}
+          className="flex h-8 w-8 items-center justify-center"
+        >
+          {i}
+        </Link>
       </li>,
     );
   }
@@ -47,13 +54,13 @@ const Pagination = ({
         <li
           className={`${
             page === 1 ? "cursor-auto" : "cursor-pointer hover:bg-secondary-100"
-          } flex h-8 w-8 items-center justify-center rounded-lg text-xl font-bold text-primary`}
+          } flex items-center justify-center rounded-lg text-xl font-bold text-primary`}
         >
           <Link
-            href={`/?genre=${genre}&page=${page - 1}`}
+            href={getHref(page - 1)}
             className={`${
               page === 1 ? "pointer-events-none text-gray-400" : ""
-            }`}
+            } flex h-8 w-8 items-center justify-center`}
           >
             <BiChevronsLeft />
           </Link>
@@ -69,13 +76,13 @@ const Pagination = ({
             page === totalPage
               ? "cursor-auto"
               : "cursor-pointer hover:bg-secondary-100"
-          } flex h-8 w-8 items-center justify-center rounded-lg text-xl font-bold text-primary`}
+          } flex items-center justify-center rounded-lg text-xl font-bold text-primary`}
         >
           <Link
-            href={`/?genre=${genre}&page=${page + 1}`}
+            href={getHref(page + 1)}
             className={`${
               page === totalPage ? "pointer-events-none text-gray-400" : ""
-            }`}
+            } flex h-8 w-8 items-center justify-center`}
           >
             <BiChevronsRight />
           </Link>

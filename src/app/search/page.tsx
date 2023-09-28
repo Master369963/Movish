@@ -6,10 +6,11 @@ const baseUrl = "https://api.themoviedb.org/3/";
 const SearchPage = async ({
   searchParams,
 }: {
-  searchParams: { q: string };
+  searchParams: { q: string; page?: string };
 }) => {
+  const page = searchParams.page ? Number(searchParams.page) : 1;
   const res = await fetch(
-    `${baseUrl}/search/movie?api_key=${process.env.API_KEY}&query=${searchParams.q}&include_adult=false&language=en-US&page=1&year=2000`,
+    `${baseUrl}/search/movie?api_key=${process.env.API_KEY}&query=${searchParams.q}&include_adult=false&language=en-US&page=${page}&year=2000`,
   );
   const data = await res.json();
   const movies = data.results;
@@ -34,7 +35,9 @@ const SearchPage = async ({
           {movies && <Cards movies={movies} />}
         </div>
       </div>
-      {dataTotslPages > 1 && <Pagination totalPage={dataTotslPages} />}
+      {dataTotslPages > 1 && (
+        <Pagination totalPage={dataTotslPages} page={page} />
+      )}
     </div>
   );
 };
