@@ -1,34 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Movish
 
-## Getting Started
+Movish is a user-friendly movie information website that offers a wide range of features and customization options. You can access it on the [Movish page on Vercel](https://movish.vercel.app/).
 
-First, run the development server:
+## How to Use
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Visit the [Movish website](https://movish.vercel.app/) and follow these steps to explore movie listings and customize your experience:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Search for Movies:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   - Enter the movie title or keywords in the search bar.
+   - Click the search button to find relevant information.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. **Browse by Trending:**
 
-## Learn More
+   - To view trending movies, click on the "Trending" section or use the dedicated navigation link.
+   - Explore the latest and most popular movie releases.
 
-To learn more about Next.js, take a look at the following resources:
+3. **Browse by Popular:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   - To see popular movies, click on the "Popular" section or use the respective navigation link.
+   - Discover movies that are highly rated or widely watched by the community.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. **Select a Movie:**
 
-## Deploy on Vercel
+   - Click on any movie card to access more detailed information about a specific film.
+   - Explore cast and crew details, read a synopsis, and check ratings.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. **Customize Your Experience:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   - Toggle between dark and light mode for a personalized viewing experience.
+   - Use responsive design to access the website seamlessly on various devices.
+
+6. **Pagination:**
+   - Navigate through movie listings with pagination for a smooth browsing experience.
+
+## Features
+
+Movish offers the following key features:
+
+- **Dark/Light Mode:** Switch between dark and light themes to suit your preference and reduce eye strain during late-night browsing.
+
+- **Pagination:** Navigate through extensive movie listings with pagination controls, making it easy to explore a large collection of films.
+
+- **Responsive Design:** Enjoy a seamless browsing experience on different devices, from desktop computers to mobile phones, thanks to responsive design principles.
+
+## Technology Stack
+
+Movish is built using the following technology stack:
+
+- **Frontend Framework:** Next.js
+- **CSS Framework:** Tailwind CSS
+- **API Integration:** IMDb API
+- **Deployment:** Vercel
+
+These technologies have been used to create a fast, responsive, and user-friendly movie information website. Next.js provides server-side rendering and routing capabilities, Tailwind CSS simplifies styling, and the IMDb API is utilized to fetch movie data, ensuring up-to-date and accurate information.
