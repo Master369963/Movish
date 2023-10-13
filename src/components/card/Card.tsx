@@ -29,6 +29,7 @@ const Card = ({ movie }: { movie: Movie }) => {
           </span>
 
           <Image
+            key={imageUrl}
             src={imageUrl}
             alt={movie.title}
             className={`object-cover transition-transform duration-200 group-hover:scale-110`}
