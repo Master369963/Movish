@@ -10,23 +10,23 @@ Movish is a user-friendly movie information website that offers a wide range of 
 
 ### Main page (dark mode)
 
-![image](https://github.com/Master369963/Movish/blob/main/ReadmeAssets/main-dark.png)
+![image](https://raw.githubusercontent.com/Master369963/Movish/main/ReadmeAssets/main-dark.jpg)
 
 ### Main page (light mode)
 
-![image](https://github.com/Master369963/Movish/blob/main/ReadmeAssets/main-light.png)
+![image](https://raw.githubusercontent.com/Master369963/Movish/main/ReadmeAssets/main-light.jpg)
 
 ### Movie detail page
 
-![image](https://github.com/Master369963/Movish/blob/main/ReadmeAssets/movie%20details.png)
-
-### Pagination
-
-![image](https://github.com/Master369963/Movish/blob/main/ReadmeAssets/pagination.png)
+![image](https://raw.githubusercontent.com/Master369963/Movish/main/ReadmeAssets/movie%20details.jpg)
 
 ### Search page
 
-![image](https://github.com/Master369963/Movish/blob/main/ReadmeAssets/search.png)
+![image](https://raw.githubusercontent.com/Master369963/Movish/main/ReadmeAssets/search.jpg)
+
+### Pagination
+
+![image](https://raw.githubusercontent.com/Master369963/Movish/main/ReadmeAssets/pagination.jpg)
 
 ## Features
 
