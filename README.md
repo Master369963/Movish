@@ -18,7 +18,7 @@ Movish is a user-friendly movie information website that offers a wide range of 
 
 ### Movie detail page
 
-![image](https://raw.githubusercontent.com/Master369963/Movish/main/ReadmeAssets/movie%20details.jpg)
+![image](https://raw.githubusercontent.com/Master369963/Movish/main/ReadmeAssets/detail-page.jpg)
 
 ### Search page
 
