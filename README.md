@@ -48,7 +48,7 @@ Movish offers the following key features:
 
 Movish is built using the following technology stack:
 
-- **Frontend Framework:** Next.js
+- **Frontend Framework:** Next.js, TypeScript
 - **CSS Framework:** Tailwind CSS
 - **API Integration:** IMDb API
 - **Deployment:** Vercel
