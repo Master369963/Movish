@@ -1,8 +1,34 @@
 # Movish
 
-Movish is a user-friendly movie information website that offers a wide range of features and customization options. You can access it on the [Movish page on Vercel](https://movish.vercel.app/).
+Movish is a user-friendly movie information website that offers a wide range of features and customization options.
 
-## How to Use
+## Live Demo
+
+[Live Demo Link](https://movish.vercel.app/)
+
+## Project Screenshot(s)
+
+### Main page (dark mode)
+
+![image](https://github.com/Master369963/Movish/blob/main/ReadmeAssets/main-dark.png)
+
+### Main page (light mode)
+
+![image](https://github.com/Master369963/Movish/blob/main/ReadmeAssets/main-light.png)
+
+### Movie detail page
+
+![image](https://github.com/Master369963/Movish/blob/main/ReadmeAssets/movie%20details.png)
+
+### Pagination
+
+![image](https://github.com/Master369963/Movish/blob/main/ReadmeAssets/pagination.png)
+
+### Search page
+
+![image](https://github.com/Master369963/Movish/blob/main/ReadmeAssets/search.png)
+
+## Features
 
 Visit the [Movish website](https://movish.vercel.app/) and follow these steps to explore movie listings and customize your experience:
 
@@ -26,23 +52,17 @@ Visit the [Movish website](https://movish.vercel.app/) and follow these steps to
    - Click on any movie card to access more detailed information about a specific film.
    - Explore cast and crew details, read a synopsis, and check ratings.
 
-5. **Customize Your Experience:**
+5. **Dark/Light Mode:**
 
    - Toggle between dark and light mode for a personalized viewing experience.
-   - Use responsive design to access the website seamlessly on various devices.
 
 6. **Pagination:**
+
    - Navigate through movie listings with pagination for a smooth browsing experience.
 
-## Features
+7. **Responsive Design:**
 
-Movish offers the following key features:
-
-- **Dark/Light Mode:** Switch between dark and light themes to suit your preference and reduce eye strain during late-night browsing.
-
-- **Pagination:** Navigate through extensive movie listings with pagination controls, making it easy to explore a large collection of films.
-
-- **Responsive Design:** Enjoy a seamless browsing experience on different devices, from desktop computers to mobile phones, thanks to responsive design principles.
+   - Use responsive design to access the website seamlessly on various devices.
 
 ## Technology Stack
 
@@ -50,7 +70,7 @@ Movish is built using the following technology stack:
 
 - **Frontend Framework:** Next.js, TypeScript
 - **CSS Framework:** Tailwind CSS
-- **API Integration:** IMDb API
+- **API Integration:** [TMDB API](https://developer.themoviedb.org/reference/intro/getting-started)
 - **Deployment:** Vercel
 
 These technologies have been used to create a fast, responsive, and user-friendly movie information website. Next.js provides server-side rendering and routing capabilities, Tailwind CSS simplifies styling, and the IMDb API is utilized to fetch movie data, ensuring up-to-date and accurate information.
