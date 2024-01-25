@@ -9,7 +9,6 @@ const SearchPage = async ({
   searchParams: { q: string; page?: string };
 }) => {
   const page = searchParams.page ? Number(searchParams.page) : 1;
-  console.log(searchParams);
   const res = await fetch(
     `${baseUrl}/search/movie?api_key=${process.env.API_KEY}&query=${searchParams.q}&include_adult=false&language=en-US&page=${page}`,
   );
