@@ -50,7 +50,7 @@ const Pagination = ({
 
   return (
     <div className="mt-4 flex justify-center sm:mt-8">
-      <ul className="flex list-none items-center justify-center gap-2 rounded-lg bg-white p-1 sm:p-2">
+      <ul className="flex list-none items-center justify-center gap-2 rounded-lg bg-white p-1 dark:bg-transparent sm:p-2">
         <li
           className={`${
             page === 1 ? "cursor-auto" : "cursor-pointer hover:bg-secondary-100"

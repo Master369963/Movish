@@ -1,40 +1,38 @@
-import Link from "next/link"
-import { AiFillHome, AiFillInfoCircle } from "react-icons/ai"
-import DarkModeSwitch from "./DarkModeSwitch"
-import { Irish_Grover } from "next/font/google"
+import Link from "next/link";
+import { AiFillHome, AiFillInfoCircle } from "react-icons/ai";
+import DarkModeSwitch from "./DarkModeSwitch";
+import { Irish_Grover } from "next/font/google";
 
-const irishGrover = Irish_Grover({ subsets: ["latin"], weight:"400" })
-
+const irishGrover = Irish_Grover({ subsets: ["latin"], weight: "400" });
 
 const Header = () => {
   return (
-    <header className="py-3 sm:py-5 px-4 select-none">
-          {/* <header className="z-20 py-3 sm:py-5 px-4 sticky top-0 select-none "> */}
-
-      <section className="max-w-5xl sm:mx-auto flex flex-row justify-between items-center">
-        <div className="flex flex-row gap-2 md:gap-4 items-center">
-          <Link href="/" className="p-2 hover:text-primary transition">
-            <AiFillHome className="sm:hidden text-2xl" />
-            <span className="hidden sm:inline text-l">HOME</span>
+    <header className="select-none px-4 py-3 sm:py-5">
+      <section className="flex max-w-5xl flex-row items-center justify-between sm:mx-auto">
+        <div className="flex flex-row items-center gap-2 md:gap-4">
+          <Link href="/" className="p-2 transition hover:text-primary">
+            <AiFillHome className="text-2xl sm:hidden" />
+            <span className="text-l hidden sm:inline">HOME</span>
           </Link>
-          <Link href="/about" className="p-2 hover:text-primary transition">
-            <AiFillInfoCircle className="sm:hidden text-2xl" />
-            <span className="hidden sm:inline text-l">ABOUT</span>
+          <Link href="/about" className="p-2 transition hover:text-primary">
+            <AiFillInfoCircle className="text-2xl sm:hidden" />
+            <span className="text-l hidden sm:inline">ABOUT</span>
           </Link>
         </div>
         <div className="flex flex-row items-center gap-2">
           <DarkModeSwitch />
           <Link href="/" className="">
             <h2 className="text-2xl">
-              <span className="font-bold bg-primary py-1 px-2 rounded-lg text-white">
-                <span className={irishGrover.className}>M</span>ov<span className="text-secondary-100 text-lg">ish</span>
+              <span className="rounded-lg bg-primary px-2 py-1 font-bold text-white">
+                <span className={irishGrover.className}>M</span>ov
+                <span className="text-lg text-secondary-100">ish</span>
               </span>
             </h2>
           </Link>
         </div>
       </section>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
