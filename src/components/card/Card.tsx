@@ -36,6 +36,7 @@ const Card = ({ movie }: { movie: Movie }) => {
             placeholder="blur"
             blurDataURL="/spinner.svg"
             fill
+            unoptimized
           />
         </div>
         <div className="flex flex-1 flex-col px-3 pt-3">
