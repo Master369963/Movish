@@ -30,7 +30,7 @@ const MovieDetails = async ({ params }: { params: { id: string } }) => {
   const movie = await getMovie(Number(params.id));
   let imageUrl;
   if (movie.backdrop_path) {
-    imageUrl = `https://image.tmdb.org/t/p/original/${
+    imageUrl = `https://image.tmdb.org/t/p/w400${
       movie.poster_path || movie.backdrop_path
     }`;
   } else {
@@ -49,6 +49,7 @@ const MovieDetails = async ({ params }: { params: { id: string } }) => {
             blurDataURL="/spinner.svg"
             width={350}
             height={500}
+            unoptimized
           />
         </div>
 
@@ -58,9 +59,12 @@ const MovieDetails = async ({ params }: { params: { id: string } }) => {
           </h2>
           <ul className="flex gap-2">
             {movie.genres &&
-              movie.genres.map((item) => {
+              movie.genres.map((item, i) => {
                 return (
-                  <li className="list-nonetext-white list-none rounded-lg bg-primary px-3 py-1 text-lg text-white">
+                  <li
+                    key={i}
+                    className="list-nonetext-white list-none rounded-lg bg-primary px-3 py-1 text-lg text-white"
+                  >
                     {item.name}
                   </li>
                 );

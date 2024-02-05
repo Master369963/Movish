@@ -11,7 +11,7 @@ const Card = ({ movie }: { movie: Movie }) => {
   let imageUrl;
 
   if (movie.backdrop_path || movie.poster_path) {
-    imageUrl = `https://image.tmdb.org/t/p/original/${
+    imageUrl = `https://image.tmdb.org/t/p/w300${
       movie.backdrop_path || movie.poster_path
     }`;
   } else {
